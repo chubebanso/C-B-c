@@ -1,0 +1,140 @@
+/* Tổng thể thẻ Card */
+.loc-player-card {
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
+    margin: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Header của Card */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.loc-player-name {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.edit-icon {
+    font-size: 16px;
+    cursor: pointer;
+    color: #1890ff;
+}
+
+/* Avatar */
+.loc-player-avatar {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+
+}
+
+/* Tiền */
+.loc-player-money {
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.loc-player-money .edit-icon {
+    margin-left: 80px;
+}
+
+/* Nhóm nút */
+.loc-button-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.loc-win-button {
+    background-color: blue;
+    border-color: blue;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    color: white;
+}
+
+.loc-burn-button {
+    background-color: red;
+    border-color: red;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    color: white;
+}
+
+.upload-button {
+    background-color: gray;
+    border-color: gray;
+}
+
+/* Header của Game */
+.loc-game-header {
+    background: #001529;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Nội dung chính */
+.loc-game-content {
+    padding: 20px;
+}
+
+/* Bố cục thẻ */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Responsive cho màn hình nhỏ */
+@media (max-width: 431px) {
+    .card-container {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .loc-player-card {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 10px;
+    }
+
+    .loc-button-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .loc-win-button,
+    .loc-burn-button {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    .loc-player-money {
+        font-size: 14px;
+        margin: 10px 0;
+    }
+
+    .loc-player-money .edit-icon {
+        margin-left: 200px;
+    }
+}

@@ -1,0 +1,156 @@
+/* Tổng thể thẻ Card */
+.player-card {
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
+    margin: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Header của Card */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.player-name {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.edit-icon {
+    font-size: 16px;
+    cursor: pointer;
+    color: #1890ff;
+}
+
+/* Avatar */
+.player-avatar {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+    height: 250px;
+}
+
+/* Tiền */
+.player-money {
+    font-size: 14px;
+    margin: 10px 0;
+    .edit-icon{
+        margin-left: 80px;
+    }
+}
+
+/* Nhóm nút */
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.button {
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.eat-button {
+    background-color: green;
+    border-color: green;
+}
+
+.win-button {
+    background-color: blue;
+    border-color: blue;
+}
+
+.victory-button {
+    background-color: gold;
+    border-color: gold;
+}
+
+.burn-button {
+    background-color: red;
+    border-color: red;
+    color: white;
+}
+
+.upload-button {
+    background-color: gray;
+    border-color: gray;
+}
+.game-header {
+    background: #001529;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Nội dung chính */
+.game-content {
+    padding: 20px;
+}
+
+/* Bố cục thẻ */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Cho phép xuống dòng khi không đủ chỗ */
+    justify-content: center;
+    /* Căn giữa các thẻ */
+}
+
+@media (max-width: 431px) {
+    .card-container {
+        display: flex;
+        flex-direction: column;
+        /* Đặt các thẻ theo chiều dọc */
+        align-items: stretch;
+        /* Đảm bảo thẻ chiếm toàn bộ chiều rộng */
+        gap: 20px;
+        /* Tăng khoảng cách giữa các thẻ */
+        width: 100%;
+        /* Đặt chiều rộng container phù hợp với màn hình */
+    }
+
+    .player-card {
+        width: 100% !important;
+        /* Chiếm toàn bộ chiều rộng container */
+        max-width: 100%;
+        /* Loại bỏ giới hạn chiều rộng tối đa */
+        margin: 0;
+        /* Loại bỏ khoảng cách margin */
+        padding: 10px;
+        /* Thêm padding nếu cần */
+    }
+
+    .button-group {
+        flex-direction: column;
+        /* Các nút sắp xếp theo chiều dọc */
+        gap: 10px;
+        /* Khoảng cách giữa các nút */
+    }
+
+    .button {
+        font-size: 14px;
+        /* Điều chỉnh kích thước chữ */
+        padding: 6px 12px;
+        /* Điều chỉnh padding */
+    }
+        .player-money {
+            font-size: 14px;
+            margin: 10px 0;
+    
+            .edit-icon {
+                margin-left: 200px;
+            }
+        }
+}
