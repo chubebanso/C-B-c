@@ -115,8 +115,8 @@ const GamePage = () => {
       );
 
       if (burner && lastWinner && burner.money > 0) {
-        lastWinner.money += 1; // Chuyển toàn bộ tiền của người bấm "Cháy" sang người "Win"
-        burner.money -= 1; // Đặt tiền của người bấm "Cháy" về 0
+        lastWinner.money += 2; // Chuyển toàn bộ tiền của người bấm "Cháy" sang người "Win"
+        burner.money -= 2; // Đặt tiền của người bấm "Cháy" về 0
         message.success(
           `${burner.name} đã Cháy và toàn bộ tiền được chuyển cho ${lastWinner.name}!`
         );
