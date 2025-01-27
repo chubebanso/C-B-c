@@ -64,8 +64,8 @@ const GamePage = () => {
       }
 
       if (eater && source && source.money > 0) {
-        source.money -= 0.5;
-        eater.money += 0.5;
+        source.money -= 1;
+        eater.money += 1;
         message.info(`${eater.name} đã ăn và lấy 1 tiền từ ${source.name}!`);
       } else {
         message.warning("Nguồn tiền không đủ để ăn!");
@@ -135,8 +135,8 @@ const GamePage = () => {
       if (winner) {
         updatedPlayers.forEach((player) => {
           if (player.id !== playerId && player.money >= 5) {
-            player.money -= 2.5;
-            winner.money += 2.5;
+            player.money -= 5;
+            winner.money += 5;
           } else if (player.id !== playerId && player.money < 5) {
             winner.money += player.money;
             player.money = 0;
